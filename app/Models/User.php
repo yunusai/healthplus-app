@@ -18,10 +18,23 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'nama',
+        'alamat',
+        'no_hp',
         'email',
+        'role',
         'password',
     ];
+
+    public function periksasebagaiPasien()
+    {
+        return $this->hasMany(Periksa::class, 'id_pasien');
+    }
+
+    public function periksasebagaiDokter()
+    {
+        return $this->hasMany(Periksa::class, 'id_dokter');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,4 +58,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    
 }
+
