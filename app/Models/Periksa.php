@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Periksa extends Model
 {
-    
+
+    protected $table = 'periksas';
     protected $fillable = [
-        'id_pasien', 
-        'id_dokter', 
-        'tgl_periksa', 
-        'catatan', 
-        'biaya_periksa'];
+        'id_pasien',
+        'id_dokter',
+        'tgl_periksa',
+        'catatan',
+        'biaya_periksa'
+    ];
 
     public function pasien()
     {

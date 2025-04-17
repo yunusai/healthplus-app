@@ -20,6 +20,10 @@ class HomeController extends Controller
     {
         return view('dokter.index');
     }
+    public function pasien()
+    {
+        return view('pasien.index');
+    }
 
     /**
      * Show the application dashboard.

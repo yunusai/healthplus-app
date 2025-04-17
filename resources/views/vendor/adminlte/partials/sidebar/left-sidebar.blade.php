@@ -11,13 +11,26 @@
         <li class="nav-item"> 
             <a href="/dokter/periksa" class="nav-link active"> 
                 <i class="far fa-circle nav-icon"></i> 
-                <p>Periksa</p> 
+                <p>Memeriksa</p> 
             </a> 
         </li> 
         <li class="nav-item"> 
             <a href="/dokter/obat" class="nav-link">
                 <i class="far fa-circle nav-icon"></i> 
                 <p>Obat</p> 
+            </a> 
+        </li> 
+    @elseif (request()->is('pasien*'))
+        <li class="nav-item"> 
+            <a href="/pasien/periksa" class="nav-link active"> 
+                <i class="far fa-circle nav-icon"></i> 
+                <p>Periksa</p> 
+            </a> 
+        </li> 
+        <li class="nav-item"> 
+            <a href="/pasien/riwayat" class="nav-link">
+                <i class="far fa-circle nav-icon"></i> 
+                <p>Riwayat</p> 
             </a> 
         </li> 
     @else 

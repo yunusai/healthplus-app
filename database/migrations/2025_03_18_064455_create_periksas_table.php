@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('id_dokter')->constrained('users')->onDelete('cascade');
             $table->dateTime('tgl_periksa');
             $table->text('catatan')->nullable();
-            $table->integer("biaya_periksa");
+            $table->integer("biaya_periksa")->nullable();
             $table->timestamps();
         });
     }

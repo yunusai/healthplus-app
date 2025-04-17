@@ -14,8 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @auth
+                        {{ __('You are logged in as ') }} {{ auth()->user()->nama }}
+                    @else
+                        {{ __('You are not logged in.') }}
+                    @endauth
                 </div>
+
             </div>
         </div>
     </div>

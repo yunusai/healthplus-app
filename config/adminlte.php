@@ -1,5 +1,7 @@
 <?php
 
+use PHPUnit\Framework\Constraint\IsFalse;
+
 return [
 
     /*
@@ -311,6 +313,7 @@ return [
         ],
 
         // Sidebar items:
+
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
@@ -327,14 +330,22 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'fitur'],
+        ['header' => 'Layanan'],
         [
-            'text' => 'periksa',
-            'url' => 'admin/settings',
+            'text' => 'Login',
+            'url' => 'login',
             'icon' => 'fas fa-fw fa-user',
+            'logout' => true, // WAJIB agar jadi form POST
         ],
         [
-            'text' => 'riwayat',
+            'text' => 'Logout',
+            'url' => 'logout',
+            'icon' => 'fas fa-fw fa-user',
+            'logout' => true, // WAJIB agar jadi form POST
+            'method' => 'POST',
+        ],
+        [
+            'text' => 'Riwayat',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
